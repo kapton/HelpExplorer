@@ -2,6 +2,9 @@ image: Visual Studio 2022
 version: 1.0.{build}
 configuration: Release
 
+before_build:
+  - cmd: msbuild .\HelpExplorerSolution.sln -t:Restore
+
 build_script:
   - cmd: dotnet --version
   - cmd: msbuild --version
