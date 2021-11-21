@@ -5,3 +5,4 @@ configuration: Release
 build_script:
   - cmd: dotnet --version
   - cmd: msbuild --version
+  - cmd: msbuild .\HelpExplorerSolution.sln -t:Rebuild -p:Configuration=Release
